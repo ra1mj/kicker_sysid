@@ -1,0 +1,10 @@
+{
+  "friction.stribeck": [
+    0.001,
+    0.03
+  ],
+  "friction.stribeck_velocity": [
+    0.2,
+    5.0
+  ]
+}

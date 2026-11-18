@@ -1,0 +1,78 @@
+{
+  "name": "demo",
+  "model": {
+    "schema": "sim2motor.actuator.v1",
+    "motor": {
+      "resistance": 2.0,
+      "inductance": 0.008,
+      "kt": 0.1,
+      "ke": 0.1,
+      "voltage_limit": 24.0,
+      "current_limit": 4.0,
+      "rotor_inertia": 0.0003,
+      "ambient_temperature": 25.0,
+      "resistance_tempco": 0.00393,
+      "thermal_resistance": 3.0,
+      "thermal_capacity": 2.0
+    },
+    "transmission": {
+      "ratio": 1.0,
+      "extra_joint_armature": 0.0,
+      "efficiency": 1.0
+    },
+    "controller": {
+      "domain": "voltage",
+      "mode": "direct",
+      "kp": 0.0,
+      "kd": 0.0,
+      "effort_limit": 1.0,
+      "stall_torque": 0.0,
+      "no_load_speed": 0.0,
+      "response_time": 0.0,
+      "delay_steps": 0,
+      "max_delay_steps": 32
+    },
+    "friction": {
+      "model": "coulomb",
+      "coulomb": 0.008,
+      "viscous": 0.001,
+      "stribeck": 0.0,
+      "stribeck_velocity": 0.1,
+      "stribeck_exponent": 2.0,
+      "load_motor": 0.0,
+      "load_external": 0.0,
+      "load_motor_stribeck": 0.0,
+      "load_external_stribeck": 0.0,
+      "quadratic_motor": 0.0,
+      "quadratic_external": 0.0
+    },
+    "encoder": {
+      "bias": 0.0
+    },
+    "metadata": {
+      "status": "synthetic_example",
+      "description": "Lumped motor constants, not product ratings"
+    }
+  },
+  "bench": {
+    "dt": 0.001,
+    "control_dt": 0.001,
+    "load_inertia": 0.0002,
+    "initial_position": 0.0,
+    "initial_velocity": 0.0,
+    "locked": false
+  },
+  "sensors": {
+    "position_noise_std": 0.0,
+    "velocity_noise_std": 0.0,
+    "current_noise_std": 0.0,
+    "temperature_noise_std": 0.0,
+    "encoder_resolution": 0.0,
+    "seed": 42
+  },
+  "experiment": {
+    "kind": "chirp",
+    "duration": 2.0,
+    "amplitude": 4.0
+  }
+}
